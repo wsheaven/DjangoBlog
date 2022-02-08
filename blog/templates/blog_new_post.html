@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <h3>Create a new post:</h3>
+<form action="/blog/post" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
